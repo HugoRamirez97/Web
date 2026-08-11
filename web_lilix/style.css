@@ -326,22 +326,22 @@ section .header{
 }
 .group{
     display: flex;
+    align-content: center;
     align-items: center;
     justify-content: center;
     gap: 1em;
-    animation: spin 10s infinite linear;
+    animation: spin 30s infinite linear;
     padding-right: 1em;
 }
 .carrusel .card{
-    flex: 0 0 5em;
-    height: 100px;
-    width: 100px;
+    flex: 0 0 5;
+    height: 100%;
+    width: 300px;
     padding: 1em;
-    border-radius: 3em;
+    border-radius: 10px;
     text-align: center;
     align-content: center;
     align-items: center;
-    object-fit:fill;
 
 }
 
