@@ -27,7 +27,7 @@ a{
 
 body{
     font-family: 'Inter', sans-serif;
-    background-color:  #8f7497;
+    background-color:  #b18fbb;
 }
 
 nav{
@@ -46,7 +46,6 @@ nav{
     list-style: none;
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
     gap: 3rem;
 }
 .btn{
@@ -57,7 +56,6 @@ nav{
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    
 }
 
 .btn:hover{
@@ -76,27 +74,24 @@ nav{
     width: 0;
     bottom: 0;
     left: 0;
-    background-color: #f8aa01;
+    background-color: #1d4ed8;
     transition:  all 0.3s ease;
 }
 
 .link a:hover::after{
-    width: 100%;
+    width: 70%;
 }
 
 
 .login-btn{
-    background-color: var(--border-color);
-    color: #891a97;
-    font-weight: 700;
-    padding: 0.4rem 1rem;
-    border: var(--secondary-color);
-    border-radius: 6px;
-    transition: opacity 0.2s ease;
+    color: var(--background-light);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 1.5rem;
 }
 
 .login-btn:hover{
-    background-color:var(--secondary-color);
+    opacity: 0.8;
 }
 
 .try-btn{
@@ -105,7 +100,7 @@ nav{
     padding: 0.4rem 1rem;
     border-radius: 6px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     transition: opacity 0.2s ease;
 }
 
@@ -184,7 +179,7 @@ header .image img{
 }
 
 section .header{
-    margin-top: 3rem;
+    margin-top: 1rem;
     color: #fff;
     text-align: center;
     font-size: 2.25rem;
@@ -195,8 +190,7 @@ section .header{
     align-items: center;
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 2rem;
@@ -208,11 +202,10 @@ section .header{
     border: 2px solid transparent;
     border-radius:  15px;
     transition: all 0.3s ease;
-    margin-bottom: 1rem;
 }
 
 .features .card:hover{
-    background-color: var(--secondary-color);
+    background-color: var(sec);
     border-color: #fff;
 }
 
@@ -251,8 +244,7 @@ section .header{
     max-width: 600px;
     margin: auto;
     text-align: center;
-    color: #290442;
-    margin-bottom: -1.4rem;
+    color: #351f1f;
 }
 .pricing{
     margin-left: 2rem;
@@ -261,7 +253,7 @@ section .header{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 4%;
 }
 .pricing .card{
     padding: 3rem 2rem;
@@ -275,7 +267,6 @@ section .header{
 }
 
 .pricing .card:hover{
-    color: #fff;
     background-color: var(--primary-color);
     border-color: #fff;
 }
@@ -298,12 +289,11 @@ section .header{
     margin-bottom: 2rem;
     font-size: 2rem;
     font-weight: 600;
-    border-bottom: 2px solid #fff ;
+    border-bottom: 2px dashed #fff ;
 }
 
 .pricing .card p{
-    color: #321458af;
-    font-weight: 400;
+    color: #4b336baf;
     margin-bottom: 0.75rem;
 }
 
@@ -320,12 +310,45 @@ section .header{
 }
 
 .pricing .card button:hover{
-    color: var(--primary-color);
-    font-weight: 700;
+    color: var(pr);
     background-color: var(--secondary-color);
     border-color: #fff ;
 }
 
+.carrusel{
+    margin: 100px auto;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+.carrusel::-webkit-scrollbar{
+    display:none;
+}
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 10s infinite linear;
+    padding-right: 1em;
+}
+.carrusel .card{
+    flex: 0 0 5em;
+    height: 100px;
+    width: 100px;
+    padding: 1em;
+    border-radius: 3em;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    object-fit:fill;
+
+}
+
+@keyframes spin{
+    from{translate: 0;}
+    to{translate: -100%;}
+}
 footer{
     position: relative;
     display: grid;
