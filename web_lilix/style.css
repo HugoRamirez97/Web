@@ -27,7 +27,7 @@ a{
 
 body{
     font-family: 'Inter', sans-serif;
-    background-color:  #b18fbb;
+    background-color:  #8f7497;
 }
 
 nav{
@@ -46,6 +46,7 @@ nav{
     list-style: none;
     display: flex;
     align-items: center;
+    font-size: 1.2rem;
     gap: 3rem;
 }
 .btn{
@@ -56,6 +57,7 @@ nav{
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    
 }
 
 .btn:hover{
@@ -74,24 +76,27 @@ nav{
     width: 0;
     bottom: 0;
     left: 0;
-    background-color: #1d4ed8;
+    background-color: #f8aa01;
     transition:  all 0.3s ease;
 }
 
 .link a:hover::after{
-    width: 70%;
+    width: 100%;
 }
 
 
 .login-btn{
-    color: var(--background-light);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 1.5rem;
+    background-color: var(--border-color);
+    color: #891a97;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border: var(--secondary-color);
+    border-radius: 6px;
+    transition: opacity 0.2s ease;
 }
 
 .login-btn:hover{
-    opacity: 0.8;
+    background-color:var(--secondary-color);
 }
 
 .try-btn{
@@ -100,7 +105,7 @@ nav{
     padding: 0.4rem 1rem;
     border-radius: 6px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: opacity 0.2s ease;
 }
 
@@ -179,7 +184,7 @@ header .image img{
 }
 
 section .header{
-    margin-top: 1rem;
+    margin-top: 3rem;
     color: #fff;
     text-align: center;
     font-size: 2.25rem;
@@ -190,7 +195,8 @@ section .header{
     align-items: center;
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 2rem;
@@ -202,10 +208,11 @@ section .header{
     border: 2px solid transparent;
     border-radius:  15px;
     transition: all 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .features .card:hover{
-    background-color: var(sec);
+    background-color: var(--secondary-color);
     border-color: #fff;
 }
 
@@ -244,7 +251,8 @@ section .header{
     max-width: 600px;
     margin: auto;
     text-align: center;
-    color: #351f1f;
+    color: #290442;
+    margin-bottom: -1.4rem;
 }
 .pricing{
     margin-left: 2rem;
@@ -253,7 +261,7 @@ section .header{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
-    margin-bottom: 4%;
+    margin-bottom: 4rem;
 }
 .pricing .card{
     padding: 3rem 2rem;
@@ -267,6 +275,7 @@ section .header{
 }
 
 .pricing .card:hover{
+    color: #fff;
     background-color: var(--primary-color);
     border-color: #fff;
 }
@@ -289,11 +298,12 @@ section .header{
     margin-bottom: 2rem;
     font-size: 2rem;
     font-weight: 600;
-    border-bottom: 2px dashed #fff ;
+    border-bottom: 2px solid #fff ;
 }
 
 .pricing .card p{
-    color: #4b336baf;
+    color: #321458af;
+    font-weight: 400;
     margin-bottom: 0.75rem;
 }
 
@@ -310,7 +320,8 @@ section .header{
 }
 
 .pricing .card button:hover{
-    color: var(pr);
+    color: var(--primary-color);
+    font-weight: 700;
     background-color: var(--secondary-color);
     border-color: #fff ;
 }
