@@ -2,7 +2,8 @@
 
 
 :root{
-    --primary-color:#4263EB;
+    --primary-color:#bc63e6;
+    --secondary-color:#d8b286;
     --text-primary: #1b1b1b;
     --text-secondary: #6b7280;
     --background-light: #f8f9ff;
@@ -20,9 +21,9 @@
 
 body{
     font-family: "Inter", sans-serif;
-    color:var(--text-primary);
+    color:var(--background-light);
     line-height: 1.5;
-    background-color: #fff;
+    background-color:  #8f7497;
     min-height: 100vh;
     font-size: var(--base-font-size);
 }
@@ -49,19 +50,22 @@ body{
 }
 
 .nav-links{
+    list-style: none;
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 3rem;
 }
 
 .nav-links a{
     text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: 500;
+    color: #2c1935;
+    font-weight: 600;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover{
-    color: var(--text-primary);
+    color: var(--secondary-color);
 }
 
 .nav-buttons{
@@ -71,9 +75,16 @@ body{
 }
 
 .login-btn{
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: 500;
+    background-color: #ccc;
+    color: #891a97;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border: var(--secondary-color);
+    border-radius: 6px;
+    transition: opacity 0.2s ease;
+}
+.login-btn:hover{
+    background-color:var(--secondary-color);
 }
 
 .try-btn{
@@ -87,7 +98,7 @@ body{
 }
 
 .try-btn:hover{
-    opacity: 0.9;
+    background-color:var(--secondary-color);
 }
 
 .main-content{
@@ -107,11 +118,11 @@ h1{
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--text-primary);
+    color: var(--secondary-color);
 }
 
 .subtitle{
-    color: var(--text-secondary);
+    color: var(--secondary-color);
     font-size: 1rem;
     margin-bottom: 3rem;
 }
@@ -127,7 +138,7 @@ h1{
     gap: 1rem;
 }
 
-.form-row .form-group{
+.form-row, .form-group{
     flex: 1 1 0;
     min-width: 0;
 }
@@ -139,9 +150,9 @@ h1{
 label{
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--text-primary);
+    color: var(--secondary-color);
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -150,17 +161,18 @@ textarea,
 select{
     width: 100%;
     padding: 0.75rem 1rem;
-    border:  1px solid var(--border-color);
+    border:  1px solid var(--secondary-color);
     border-radius: 8px;
     font-size: 0.97rem;
-    color: var(--text-primary);
+    color: var(--primary-color);
     background-color: #fff;
     transition: all 0.2s ease;
+    font-weight: 520;
 }
 
 select{
     appearance: none;
-     background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     padding-right: 2.5rem;
@@ -175,8 +187,8 @@ textarea{
 button{
     width: 100%;
     padding: 0.875rem 1.5rem;
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
     border: none;
     border-radius: 8px;
     font-weight: 500;
@@ -185,11 +197,12 @@ button{
 }
 
 button:hover{
-    opacity: 0.9;
+    background-color:#e7932c;
+    color: var(--background-light);
 }
 
 .rigth-selection{
-    background-color: var(--background-light);
+    background-color: #fff;
     padding: 1rem 2rem;
     border-radius: 16px;
 }
@@ -199,6 +212,7 @@ button:hover{
     gap: 1rem;
     padding: 1.5rem;
     background-color: #fff;
+    opacity: 80%;
     border-radius: 12px;
     margin-bottom: 1rem;
     transition: transform 0.2s ease;
@@ -207,6 +221,9 @@ button:hover{
 
 .resource-card:hover{
     transform: translateY(-2px) ;
+    background-color:#fff;
+    color: #fff;
+    opacity: 100%;
 }
 
 .resource-icon{
@@ -216,19 +233,20 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--background-light);
     border-radius: 12px;
+    color: #fff;
 }
 
 
 .resource-content h3{
+    color: #9d35da;
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .resource-content p{
-    color: var(--text-secondary);
+    color: #e7932c;
     font-size: 0.82rem;
     line-height: 1.5;
 }
